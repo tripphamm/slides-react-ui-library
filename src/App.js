@@ -12,7 +12,6 @@ import ListWithEmojis from './components/ListWithEmojis';
 
 import reduxLogo from './images/redux-logo.svg';
 import reduxComparison from './images/redux-comparison.png';
-import reduxPatternDiagram from './images/redux-pattern-diagram.png';
 
 class App extends React.Component {
   componentDidMount() {
@@ -34,6 +33,10 @@ class App extends React.Component {
             />
             <h1>Redux</h1>
             <p>EJ Hammond</p>
+          </Slide>
+          <Slide>
+            <h3>Audience</h3>
+            <p>Folks who may have already used Redux in a React project, but want to learn more about how it really works</p>
           </Slide>
           <Slide>
             <h3>Agenda</h3>
@@ -209,28 +212,51 @@ class Todos extends React.Component {
           </Slide>
           <Slide>
             <h3>2015 React + Redux</h3>
-            <img src={reduxComparison} alt="Redux comparison" />
+            <img
+              style={{
+                height: '70vh',
+              }}
+              src={reduxComparison}
+              alt="Redux comparison"
+            />
             <caption
               style={{
                 display: 'block',
                 fontSize: '0.3em',
-                height: '70vh',
               }}
             >
               https://css-tricks.com/learning-react-redux/ (modified)
             </caption>
           </Slide>
           <Slide>
-            <h3>2015 React + Redux</h3>
-            <img src={reduxPatternDiagram} alt="Redux pattern" />
-            <caption
-              style={{
-                display: 'block',
-                fontSize: '0.3em',
-              }}
-            >
-              https://angularfirebase.com/lessons/angular-ngrx-redux-starter-guide/
-            </caption>
+            <h3>Redux</h3>
+            <ListWithEmojis
+              animated
+              items={[
+                {
+                  emojiUnicodeOrShortName: ':ok_hand:',
+                  // < 500 lines unminified
+                  text: 'The library is tiny',
+                },
+                {
+                  emojiUnicodeOrShortName: ':brain:',
+                  text: 'It is a way of thinking about state management',
+                },
+                {
+                  emojiUnicodeOrShortName: ':statue_of_liberty:',
+                  text: 'It works independently from React',
+                },
+              ]}
+            />
+          </Slide>
+          <Slide>
+            <h3>Redux Demo 1</h3>
+            <p>Show the core functionality by creating a minimal* example</p>
+            <p>*No React required</p>
+          </Slide>
+          <Slide>
+            <h3>Redux Demo 2</h3>
+            <p>Show how React interfaces with Redux by implementing the interface ourselves</p>
           </Slide>
         </div>
       </div>

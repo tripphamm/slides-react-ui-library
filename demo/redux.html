@@ -1,0 +1,61 @@
+<html>
+	<head>
+    <title>Redux Counter</title>
+	</head>
+	<body>
+    <div st>
+      <button id="addButton">+</button>
+      <div id="counterDisplay">0</div>
+      <button id="subtractButton">-</button>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/redux/4.0.0/redux.js"></script>
+    <script>
+      const addAction = {
+        type: 'ADD',
+      };
+
+      const subtractAction = {
+        type: 'SUBTRACT',
+      };
+
+      const initialState = {
+        counter: 0,
+      };
+
+      function reduce(currentState = initialState, action) {
+        switch (action.type) {
+          case 'ADD':
+            return {
+              ...currentState,
+              counter: currentState.counter + 1,
+            };
+          case 'SUBTRACT':
+            return {
+              ...currentState,
+              counter: currentState.counter - 1,
+            };
+          default:
+            return currentState;
+        }
+      }
+
+      const store = Redux.createStore(reduce);
+
+      document.getElementById('addButton').onclick = () => {
+        store.dispatch(addAction);
+      };
+
+      document.getElementById('subtractButton').onclick = () => {
+        store.dispatch(subtractAction);
+      };
+
+      store.subscribe(() => {
+        const stateSnapshot = store.getState();
+
+        console.log('state changed', stateSnapshot);
+
+        document.getElementById('counterDisplay').innerText = stateSnapshot.counter;
+      });
+    </script>
+	</body>
+</html>
