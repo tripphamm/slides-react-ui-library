@@ -36,7 +36,7 @@ class App extends React.Component {
           </Slide>
           <Slide>
             <h3>Audience</h3>
-            <p>Folks who may have already used Redux in a React project, but want to learn more about how it really works</p>
+            <p>Folks who may have already have some React+Redux experience, but want to learn more about how it works</p>
           </Slide>
           <Slide>
             <h3>Agenda</h3>
