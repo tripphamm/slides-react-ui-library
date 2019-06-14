@@ -11,16 +11,25 @@
     "browser": true,
     "node": true
   },
-  "extends": [
-    "airbnb"
-  ],
+  "extends": [],
   "rules": {
     "max-len": [
-      "warn", { "code": 160 }
+      "warn",
+      {
+        "code": 160
+      }
     ],
     "no-console": "off",
     "no-nested-ternary": "off",
     "import/prefer-default-export": "off",
-    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }]
+    "react/jsx-filename-extension": [
+      1,
+      {
+        "extensions": [
+          ".js",
+          ".jsx"
+        ]
+      }
+    ]
   }
 }

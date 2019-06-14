@@ -1,7 +1,7 @@
 {
-  "name": "slides-redux",
+  "name": "slides-react-ui-library",
   "version": "1.0.0",
-  "description": "Redux presentation slides",
+  "description": "React ui library presentation slides",
   "main": "server.js",
   "scripts": {
     "server": "node server.js",
@@ -9,7 +9,6 @@
     "build": "webpack --config webpack.config.prod.js --optimize-minimize"
   },
   "keywords": [
-    "redux",
     "slides",
     "presentation"
   ],

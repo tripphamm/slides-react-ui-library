@@ -7,12 +7,13 @@ function Emoji(props) {
   const {
     unicodeOrShortName,
     style,
+    className,
     ...restProps
   } = props;
 
   return (
     <img
-      className="plain" // so that reveal.css doesn't put a frame around the image
+      className={className ? className + " plain" : "plain"} // so that reveal.css doesn't put a frame around the image
       src={getImageSrcByUnicodeOrShortName(unicodeOrShortName)}
       alt={`${unicodeOrShortName} emoji`}
       style={{
